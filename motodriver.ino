@@ -38,9 +38,9 @@ void loop()
             raz = j - arr;
             while (i<raz)
             {
-              digitalWrite(Dir1a, HIGH);
-              digitalWrite(Dir1b, LOW);
-              pwmValue1 = (analogValue1 - 512)/2;   //for change ..za edno razdelenie..
+              digitalWrite(d1a, HIGH);
+              digitalWrite(d1b, LOW);
+              pwmValue1 = (st - 512)/2;   //for change ..za edno razdelenie..
               i++;
             }
           }
@@ -49,9 +49,9 @@ void loop()
             raz = arr - j;
             while (i<raz)
             {
-              digitalWrite(Dir1a, LOW);
-              digitalWrite(Dir1b, HIGH);
-              pwmValue1 = (analogValue1 - 512)/2;   //for change ..za edno razdelenie..
+              digitalWrite(d1a, LOW);
+              digitalWrite(d1b, HIGH);
+              pwmValue1 = (st - 512)/2;   //for change ..za edno razdelenie..
               i++;
             }
           }
