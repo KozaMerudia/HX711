@@ -1,3 +1,21 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+
+
+
+
 #include <Arduino.h>
 #include <HX711.h>
 
@@ -126,6 +144,10 @@ void HX711::power_up() {
 	digitalWrite(PD_SCK, LOW);
 }
 
+
+
+
+
 #ifndef HX711_h
 #define HX711_h
 
@@ -199,6 +221,11 @@ class HX711
 
 #endif /* HX711_h */
 
+
+
+
+
+
 {
     "name": "HX711",
     "keywords": "hx711, scale, weight",
@@ -216,6 +243,11 @@ class HX711
         "espressif"
     ]
 }
+
+
+
+
+
 
 GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
@@ -557,6 +589,11 @@ consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.
 
+
+
+
+
+
 HX711
 =====
 
@@ -587,17 +624,3 @@ How to Calibrate Your Scale
 3. Place a known weight on the scale and call get_units(10).
 4. Divide the result in step 3 to your known weight. You should get about the parameter you need to pass to set_scale.
 5. Adjust the parameter in step 4 until you get an accurate reading.
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
