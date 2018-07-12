@@ -2,7 +2,7 @@
 
 HX711 scale(5, 6);
 
-float calibration_factor = 237; // this calibration factor is adjusted according to my load cell
+float calibration_factor = -375; // this calibration factor is adjusted according to my load cell
 float units;
 float ounces;
 
@@ -39,11 +39,8 @@ void loop() {
   Serial.print(calibration_factor);
   Serial.println();
   
-  if (units>120)
-  {
-    Serial.print("chushki");
-    }
-
+  /// float st = units;
+  
   if(Serial.available())
   {
     char temp = Serial.read();
