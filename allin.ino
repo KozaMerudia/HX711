@@ -61,20 +61,17 @@ void loop() {
     else if(temp == '-' || temp == 'z')
       calibration_factor -= 1;
   }
-  return units;
-}
 
 
 
 
 
-void lop()
-{
-   int i=0, j=0, raz =0;  
-    if (units>5 && units<100)
+
+   int i=0, j=1, raz =0;  
+  /*  if (units>50 && units<100)
     {
       j=1;
-    }
+    }*/
     if (units>100 && units<150)
     {
       j=2;
@@ -87,6 +84,10 @@ void lop()
     {
       j=4;
     }
+    if (j==ar)
+    {
+      Serial.print(" TUK "); 
+      }
           if(j>ar)
           {
             raz = j - ar;
@@ -94,18 +95,28 @@ void lop()
             {
               digitalWrite(d1a, HIGH);
               digitalWrite(d1b, LOW);
-              analogWrite(e1,240) ;
+              analogWrite(e1,120) ;
+                  delay(3000) ;     
+              
+                  digitalWrite(d1a,HIGH) ;
+                  digitalWrite(d1b,HIGH) ;
+                  delay(1000) ;
               i++;
             }
           }
-          else 
+          if(j<ar)
           {
              raz = ar - j;
             while (i<raz)
             {
               digitalWrite(d1a, LOW);
               digitalWrite(d1b, HIGH);
-              analogWrite(e1,240) ;
+              analogWrite(e1,120) ;
+                  delay(3000) ;     
+              
+                  digitalWrite(d1a,HIGH) ;
+                  digitalWrite(d1b,HIGH) ;
+                  delay(1000) ;
               i++;
             }
           }
