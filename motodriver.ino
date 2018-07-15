@@ -33,29 +33,46 @@ void loop()
     {
       j=4;
     }
+          if (j>0)
+  {
+    if (j==ar)
+    {
+      Serial.print(" TUK "); 
+      }
           if(j>ar)
           {
-            raz = j - arr;
+            raz = j - ar;
             while (i<raz)
             {
               digitalWrite(d1a, HIGH);
               digitalWrite(d1b, LOW);
-              pwmValue1 = (st - 512)/2;   //for change ..za edno razdelenie..
+              analogWrite(e1,240) ;
+                  delay(2200) ;     
+              
+                  digitalWrite(d1a,HIGH) ;
+                  digitalWrite(d1b,HIGH) ;
+                  delay(1000) ;
               i++;
             }
           }
-          else 
+          if(j<ar)
           {
-            raz = arr - j;
+             raz = ar - j;
             while (i<raz)
             {
               digitalWrite(d1a, LOW);
               digitalWrite(d1b, HIGH);
-              pwmValue1 = (st - 512)/2;   //for change ..za edno razdelenie..
+              analogWrite(e1,240) ;
+                  delay(2000) ;     
+              
+                  digitalWrite(d1a,HIGH) ;
+                  digitalWrite(d1b,HIGH) ;
+                  delay(1000) ;
               i++;
             }
           }
-   ar = j;
-}
+          analogWrite(e1,240) ;
+          ar = j;
+  }
 
-analogWrite(Enable1,pwmValue1);
+}
