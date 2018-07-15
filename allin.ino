@@ -2,7 +2,7 @@
 
 HX711 scale(5, 6);
 
-float calibration_factor = -370; // this calibration factor is adjusted according to my load cell
+float calibration_factor = -308; // this calibration factor is adjusted according to my load cell
 float units;
 float ounces;
 
@@ -62,8 +62,13 @@ void loop() {
       calibration_factor -= 1;
   }
 
-   int i=0, j=1, raz =0;  
-    if (units>50 && units<100)
+
+
+
+
+
+   int i=0, j=0, raz =0;  
+    if (units>5 && units<100)
     {
       j=1;
     }
@@ -75,10 +80,12 @@ void loop() {
     {
       j=3;
     }
-    if (units>200)
+    /*if (units>200)
     {
       j=4;
-    }
+    }*/
+  if (j>0)
+  {
     if (j==ar)
     {
       Serial.print(" TUK "); 
@@ -107,7 +114,7 @@ void loop() {
               digitalWrite(d1a, LOW);
               digitalWrite(d1b, HIGH);
               analogWrite(e1,240) ;
-                  delay(2200) ;     
+                  delay(2000) ;     
               
                   digitalWrite(d1a,HIGH) ;
                   digitalWrite(d1b,HIGH) ;
@@ -115,7 +122,7 @@ void loop() {
               i++;
             }
           }
+          analogWrite(e1,240) ;
           ar = j;
-   
-analogWrite(e1,240) ;
+  }
 }
