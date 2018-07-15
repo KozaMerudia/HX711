@@ -63,10 +63,10 @@ void loop() {
   }
 
    int i=0, j=1, raz =0;  
-  /*  if (units>50 && units<100)
+    if (units>50 && units<100)
     {
       j=1;
-    }*/
+    }
     if (units>100 && units<150)
     {
       j=2;
