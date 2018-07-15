@@ -62,11 +62,6 @@ void loop() {
       calibration_factor -= 1;
   }
 
-
-
-
-
-
    int i=0, j=1, raz =0;  
   /*  if (units>50 && units<100)
     {
@@ -95,8 +90,8 @@ void loop() {
             {
               digitalWrite(d1a, HIGH);
               digitalWrite(d1b, LOW);
-              analogWrite(e1,120) ;
-                  delay(3000) ;     
+              analogWrite(e1,240) ;
+                  delay(2200) ;     
               
                   digitalWrite(d1a,HIGH) ;
                   digitalWrite(d1b,HIGH) ;
@@ -111,8 +106,8 @@ void loop() {
             {
               digitalWrite(d1a, LOW);
               digitalWrite(d1b, HIGH);
-              analogWrite(e1,120) ;
-                  delay(3000) ;     
+              analogWrite(e1,240) ;
+                  delay(2200) ;     
               
                   digitalWrite(d1a,HIGH) ;
                   digitalWrite(d1b,HIGH) ;
