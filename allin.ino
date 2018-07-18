@@ -10,7 +10,6 @@ float ounces;
 const int d1a = 2;
 const int d1b = 3;
 const int e1 = 4;
-const int anpin = A0;
 byte pwmValue1 = 0;
 int ar = 1;
 
@@ -21,7 +20,7 @@ void setup() {
   pinMode(e1, OUTPUT); 
 
   
-  Serial.begin(9600);
+  Serial.begin(14400);
   Serial.println("HX711 calibration sketch");
   Serial.println("Remove all weight from scale");
   Serial.println("After readings begin, place known weight on scale");
