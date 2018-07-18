@@ -20,7 +20,7 @@ void setup() {
   pinMode(e1, OUTPUT); 
 
   
-  Serial.begin(14400);
+  Serial.begin(9600);         //14400
   Serial.println("HX711 calibration sketch");
   Serial.println("Remove all weight from scale");
   Serial.println("After readings begin, place known weight on scale");
